@@ -1,0 +1,30 @@
+---
+title: "enrollment"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library(tidyverse)
+library(dplyr)
+library(knitr)
+library(readxl)
+library(readr)
+library(janitor)
+
+```
+
+```{r}
+e_18 <- read_excel("class_enrollment_summary_by_term_10_12 (1).xlsx", 
+                   skip = 2) %>% 
+  clean_names()
+
+e_16 <- read_excel("copy_of_class_enrollment_summary_by_term_10.06.2016.xlsx",
+                   skip = 2) %>% 
+  clean_names()
+e_stats <- read_excel("CourseEnrollmentStatistics.xlsx")
+```
+
+
+
+
